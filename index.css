@@ -24,10 +24,11 @@ label,
 input {
   display: block;
   margin-bottom: 10px;
+  align-items: center;
 }
 
 button {
-  background-color: #0074e4;
+  background-color: cadetblue;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -37,7 +38,7 @@ button {
 }
 
 button:hover {
-  background-color: #0056a7;
+  background-color: darkcyan;
 }
 
 /* Modal Styles */
