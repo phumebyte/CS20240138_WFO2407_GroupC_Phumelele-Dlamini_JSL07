@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const studentName = studentNameInput.value;
       const personalMessage = personalMessageInput.value;
       const courseName = courseNameInput ? courseNameInput.value : "a course"; // Fallback to "a course" if no input
+      const today = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }); // created a date variable to be able to display the date on certificate
   
       if (studentName.trim() === '' || personalMessage.trim() === '') {
         alert('Please fill in all fields');
@@ -34,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
       <h3>${courseName}</h3>
       <img src="logo.png" alt="codespace academy logo">
       <h2>${personalMessage}</h2>
-     
+      <p>Milestone reached on ${today}</p>
     `;
     
       //  Display the modal
