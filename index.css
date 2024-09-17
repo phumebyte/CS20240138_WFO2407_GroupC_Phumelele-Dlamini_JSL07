@@ -1,5 +1,6 @@
+/* General Styles */
 body {
-    font-family: 'Raleway', serif;
+  font-family: 'Raleway', serif;
   text-align: center;
   background-color: #f0f0f0;
   margin: 0;
@@ -39,45 +40,51 @@ button:hover {
   background-color: #0056a7;
 }
 
-/* Certificate Modal */
-
+/* Modal Styles */
 .modal {
-    max-width: 800px;
-    margin: 0 auto; /* Center horizontally */
-    position: fixed;
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Center both vertically and horizontally */
-    z-index: 1;
-  }
-  
-  .modal-content {
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    position: relative;
-    border: 3px solid #659f8f;
-  }
-  
+  display: none; /* Hidden initially */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 80%;
+  max-width: 800px;
+}
 
+.modal-content {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+  border: 3px solid #659f8f;
+}
+
+/* Decorative borders */
 .modal-content::before {
   content: "";
   position: absolute;
-  top: -2px; right: -2px; bottom: -2px; left: -2px;
-  z-index: -1;
+  top: -2px;
+  right: -2px;
+  bottom: -2px;
+  left: -2px;
   background: linear-gradient(#659f8f, #5d5f5e);
   border-radius: 15px;
+  z-index: -1;
 }
 
 .modal-content::after {
   content: "";
   position: absolute;
-  top: -1px; right: -1px; bottom: -1px; left: -1px;
-  z-index: -2;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
   background: #fff;
   border: 1px solid #dc7f5f;
   border-radius: 15px;
+  z-index: -2;
 }
 
 #certificateContent {
@@ -90,20 +97,15 @@ button:hover {
   margin: 20px 0;
 }
 
-h1, .modal-content h2, .modal-content p {
-  color: #5d5f5e;
-}
-
 .close {
   color: #dc7f5f;
+  cursor: pointer;
 }
 
-button {
-  background-color: #659f8f;
-  color: #fff;
+/* Image Resizing */
+#certificateContent img {
+  max-width: 80%; /* Image spans 80% of the modal's width */
+  height: auto;
+  display: block;
+  margin: 20px auto; /* Center the image */
 }
-
-button:hover {
-  background-color: #5d5f5e;
-}
-
